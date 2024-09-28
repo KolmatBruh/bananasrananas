@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bananas Rananas : Normal Mode</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" type="bananapicturelol.jpg" href="bananapicturelol.jpg">
+  <link rel="stylesheet" href="index.css">
+  <script src="normal.js"></script>
+</head>
+<body onbeforeunload="return closingCode()">
+  <div style="text-align: center;" class="center">
+    <h1 id="total">
+        <img src="bananapicturelol.jpg" width="30" alt="bananas" style="vertical-align: middle;"/> 
+        : 0
+    </h1>
+    <h5 id="click" style="font-family: Trebuchet MS;">
+      <img src="bananapicturelol.jpg" width="30" alt="bananas" style="vertical-align: middle;"/> 
+      /click: 1 | 
+      <img src="bananapicturelol.jpg" width="30" alt="bananas" style="vertical-align: middle;"/> 
+      /sec: 0
+    </h5>
+    <img class="round" src="bananapicturelol.jpg" width="150" onclick="clicked()" />
+    <br><br>
+    <button id="upgrade" class="round" onclick="upgrade('upgrade')" style="font-family: Courier;">0-manual labour upgrade: 15</button>
+    <br><br>
+    <button id="cat" class="round" onclick="upgrade('clicker cat')" style="font-family: Courier;">0-banana farmer: 25 | +1/sec</button>
+    <br><br>
+    <button id="worker" class="round" onclick="upgrade('worker')" style="font-family: Courier;">0-premium banana farmer: 250 | +15/sec</button>
+    <br><br>
+    <button class="settings" onclick="save()">Save</button>
+    <button class="settings" onclick="load()">Load</button>
+    <button class="settings" onclick="reset()">Reset</button>
+    <button class="settings" onclick="clearData()">Clear</button>
+    <button class="settings" onclick="goToMain()">Modes</button>
+    <br><br>
+  </div>
+</body>
+</html>
+

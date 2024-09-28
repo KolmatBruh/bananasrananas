@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bananas Rananas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" href="bananapicturelol.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="index.css">
+  <script>
+    function goToNormal() {
+      window.location.href = 'normal.html'; // Redirect to normal.html
+    }
+
+    function goToStress() {
+      window.location.href = 'stress.html'; // Redirect to stress.html
+    }
+
+    function changeHeading(newText) {
+      document.getElementById('gameModeHeading').innerHTML = newText;
+    }
+
+    function resetHeading() {
+      changeHeading('Hover over a button to see the description for the modes!<br>Hold a button to see on mobile.');
+    }
+  </script>
+</head>
+<body>
+  <div style="text-align: center;" class="center">
+    <h1>Select a Gamemode!</h1>
+    <button class="settings" id="normalButton" onclick="goToNormal()" 
+            onmouseover="changeHeading('Normal: Just normal.<br>Get to level 50 on all upgrades! :D')"
+            onmouseout="resetHeading()">Normal</button>
+    <button class="settings" id="stressButton" onclick="goToStress()" 
+            onmouseover="changeHeading('Stress: You haven\'t paid your taxes.<br>They will take double of how much you make per click every second.<br>Get to level 50 on your debts and taxes to win.')"
+            onmouseout="resetHeading()">Stress</button>
+    <br><br>
+    <br><br>
+    <br><br>
+    <h2 id="gameModeHeading">Hover over a button to see the description for the modes!<br>Hold a button to see on mobile.</h2>
+  </div>
+</body>
+</html>
